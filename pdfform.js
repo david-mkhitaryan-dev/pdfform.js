@@ -439,6 +439,7 @@ function transform(buf, fields) {
 
 		var ref = n._pdfform_ref;
 		var e = objects.update(ref, n);
+		e.obj._pdfform_ref.readonly = true;
 		objects.write_object(out, e);
 	});
 
